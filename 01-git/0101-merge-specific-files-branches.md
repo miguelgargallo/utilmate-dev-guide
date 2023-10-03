@@ -29,12 +29,12 @@
 
 ## Example
 
-```
-git checkout main
-git checkout dev -- path/to/image.svelte path/to/language.svelte
-git commit -m "Merged specific files from dev"
-git push origin main
-```
+    ```
+    git checkout main
+    git checkout dev -- path/to/image.svelte path/to/language.svelte
+    git commit -m "Merged specific files from dev"
+    git push origin main
+    ```
 
 ## Glossary
 - **Cherry-Pick**: The act of choosing specific changes from one branch and applying them onto another.
