@@ -1,0 +1,1 @@
+# Misc folder does not contains guides, it's for internal use only.
