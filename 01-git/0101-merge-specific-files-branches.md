@@ -22,19 +22,15 @@
 
 4. **Commit and Push**: Now, commit these changes and push them to the remote repository.
 
-    ```bash
     git commit -m "Merged specific files from dev"
     git push origin main
-    ```
 
 ## Example
 
-    ```
     git checkout main
     git checkout dev -- path/to/image.svelte path/to/language.svelte
     git commit -m "Merged specific files from dev"
     git push origin main
-    ```
 
 ## Glossary
 - **Cherry-Pick**: The act of choosing specific changes from one branch and applying them onto another.
