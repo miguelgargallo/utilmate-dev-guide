@@ -27,7 +27,7 @@
     git push origin main
     ```
 
-## Example
+5. **Resumen**: 
 
     ```bash
     git checkout main
