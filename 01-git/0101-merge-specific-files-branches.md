@@ -1,57 +1,43 @@
-# Merge Specific Files Between Branches
-
-## Introduction
-Git allows for the selective merging of files between branches, enabling developers to apply changes to only specific files rather than an entire branch.
+# Merging Specific Files from `dev` to `main`
 
 ## Steps
 
-1. **Switch to the Target Branch**
+1. **Checkout the Target Branch**: Make sure you are in the branch where you want to apply the changes (in this case, `main`).
 
-    ``` w
+    ```bash
     git checkout main
-
     ```
 
-2. **Fetch the Latest Changes (Optional)**
+2. Optional **Pull**: If you want to make sure you have the latest changes from the remote repository, you can pull them now.
 
-    ``` 
+    ```bash
     git pull origin main
-
     ```
 
-3. **Checkout Specific Files from Source Branch**
+3. **Cherry-Pick Specific Files**: Use the `git checkout` command followed by the source branch name (`dev` in your case) and the paths to the specific files you want to merge.
 
-    ``` 
+    ```bash
     git checkout dev -- path/to/image.svelte path/to/language.svelte
-
     ```
 
-4. **Commit Changes**
+4. **Commit and Push**: Now, commit these changes and push them to the remote repository.
 
-    ``` 
-    git commit -m "Merged specific files from dev to main"
-
-    ```
-
-5. **Push Changes to Remote Repository**
-
-    ``` 
+    ```bash
+    git commit -m "Merged specific files from dev"
     git push origin main
-
     ```
 
-## Conclusion
-By following these steps, you can selectively merge files from one branch into another without affecting the rest of the branch.
+```
+git checkout main
+git checkout dev -- path/to/image.svelte path/to/language.svelte
+git commit -m "Merged specific files from dev"
+git push origin main
+```
 
-# Vocabulary and Historical Context
-Git: A distributed version control system, initially developed by Linus Torvalds in 2005. It's widely used for source code management.
+## Glossary
+- **Cherry-Pick**: The act of choosing specific changes from one branch and applying them onto another.
+- **Commit**: A set of changes to a repository.
+- **Push**: The act of updating the remote repository with local changes.
 
-Branch: In Git, a branch is essentially a unique set of code changes with a unique name. The main or master branch is usually the default and is often considered as the "final" version of the project.
-
-Commit: A commit, or "revision", is an individual change to a file (or set of files). It's like when you save a file, except with Git, every time you save it creates a unique ID that allows you to keep record of what changes were made when and by who.
-
-Checkout: The act of switching between different versions of a target repository. In this context, you are "checking out" specific files from the dev branch to bring them into the main branch.
-
-Pull: Fetching the latest changes from an online repository without merging them is known as pulling. In the context of GitHub, this is done using git pull.
-
-By understanding these terms and their historical context, you can better appreciate the functionalities that Git offers for code management and collaboration.
+## Historical Context
+The concept of "cherry-picking" changes in version control dates back well before Git. However, Git has made it particularly easy to apply this strategy, allowing developers great flexibility in managing branches.
