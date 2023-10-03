@@ -27,6 +27,8 @@
     git push origin main
     ```
 
+## Example
+
 ```
 git checkout main
 git checkout dev -- path/to/image.svelte path/to/language.svelte
